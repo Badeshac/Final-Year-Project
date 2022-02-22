@@ -1,0 +1,18 @@
+names:
+- 0-speed_limit
+- 1-goods_vehicles
+- 2-no_overtaking
+- 3-no_stopping
+- 4-no_parking
+- 5-stop
+- 6-bicycle
+- 7-hump
+- 8-no_left
+- 9-no_right
+- 10-priority_to
+- 11-no_entry
+- 12-yield
+- 13-parking
+nc: 14
+train: CURE-TSD/11/03/images/train
+val: CURE-TSD/11/03/images/val

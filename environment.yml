@@ -1,0 +1,24 @@
+# conda env create -f environment.yml
+# conda env update --file environment.yml --prune
+name: py39-yolov5
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9
+  - matplotlib
+  - numpy
+  - opencv
+  - Pillow
+  - PyYAML
+  - requests
+  - scipy
+  - pytorch
+  - torchvision
+  - tqdm
+  - tensorboard
+  - wandb
+  - pandas
+  - seaborn
+  - pyyaml
+  - scikit-learn
