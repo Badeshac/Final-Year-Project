@@ -25,13 +25,19 @@ for file in files:
         if retval:
 
             # write extracted frame as an image
-            name = Path(
+            dst = Path(
                 file.parent,
+                "images",
                 f"{file.stem}_{frame_no:03}.jpg",
             )
-            print(f"Saving image: {name}")
 
-            cv2.imwrite(str(name), image)
+            # if the destination does not exist, create it
+            if not dst.parent.exists():
+                dst.parent.mkdir(parents=True)
+
+            print(f"Saving image: {dst}")
+
+            cv2.imwrite(str(dst), image)
 
             frame_no += 1
 

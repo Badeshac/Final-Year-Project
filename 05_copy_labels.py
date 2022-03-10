@@ -1,6 +1,7 @@
 # %%
 import os
 import shutil
+from cProfile import label
 from pathlib import Path
 
 
@@ -15,8 +16,13 @@ def copy_file(file, folder_name, sub_folder_name):
             "CURE-TSD",
             folder_name,
             sub_folder_name,
+            "labels",
             f"{file.name}",
         )
+
+        # if the destination does not exist, create it
+        if not dst.parent.exists():
+            dst.parent.mkdir(parents=True)
 
         print(f"Copying {file.name} to {dst}")
 
@@ -25,8 +31,13 @@ def copy_file(file, folder_name, sub_folder_name):
         dst = Path(
             "CURE-TSD",
             folder_name,
+            "labels",
             f"{file.name}",
         )
+
+        # if the destination does not exist, create it
+        if not dst.parent.exists():
+            dst.parent.mkdir(parents=True)
 
         print(f"Copying {file.name} to {dst}")
 

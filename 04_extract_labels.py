@@ -11,8 +11,7 @@ image_height = 1236
 
 # create a dict that will be used to create a df
 data = {
-    "label_file": [],
-    "image_file": [],
+    "file": [],
     "sequence": [],
     "frame": [],
     "sign": [],
@@ -111,8 +110,7 @@ for file in files:
         with dst.open("a") as f:
             f.write(row)
 
-        data["label_file"].append(f"{sequence_number}_{frame_number}.txt")
-        data["image_file"].append(f"{sequence_number}_{frame_number}.jpg")
+        data["file"].append(f"{sequence_number}_{frame_number}")
         data["sequence"].append(sequence_number)
         data["frame"].append(frame_number)
         data["sign"].append(signs[sign_type])
